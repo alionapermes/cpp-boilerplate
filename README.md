@@ -4,6 +4,10 @@ My basic template for C++ projects
 
 ```sh
 .
+├── docs
+│   └── CMakeLists.txt
+├── include
+│   └── .gitkeep
 ├── .clang-format
 ├── .gitignore
 ├── CMakeLists.txt
