@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.10)
 project(name VERSION 0.1.0 LANGUAGES CXX)
 
-include(${CMAKE_BINARY_DIR/conanbuildinfo.cmake)
+include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
 conan_basic_setup()
 
 set(CMAKE_CXX_STANDARD 20)
@@ -17,4 +17,10 @@ endif()
 if (DOCS)
     add_subdirectory(docs)
 endif()
+
+# set(EXEC exec_name)
+# set(SRC main.cpp)
+#
+# add_executable(${EXEC} ${SRC})
+# target_link_libraries(${EXEC} ${CONAN_LIBS})
 
