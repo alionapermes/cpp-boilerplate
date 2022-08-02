@@ -1,7 +1,7 @@
 [requires]
-fmt/8.1.1
-doxygen/1.9.2
-gtest/1.11.0
+fmt/9.0.9
+doxygen/1.9.4
+gtest/1.12.1
 
 [generators]
 cmake
