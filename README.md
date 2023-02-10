@@ -6,8 +6,6 @@ My basic template for C++ projects
 .
 ├── docs
 │   └── CMakeLists.txt
-├── include
-│   └── .gitkeep
 ├── .clang-format
 ├── .gitignore
 ├── CMakeLists.txt
@@ -16,4 +14,3 @@ My basic template for C++ projects
 ├── LICENSE
 └── README.md
 ```
-
