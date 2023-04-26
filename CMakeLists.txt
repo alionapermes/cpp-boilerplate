@@ -7,11 +7,11 @@ conan_basic_setup()
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-find_program(MOLD NAMES "mold")
-if (NOT DEFINED ${MOLD-NOTFOUND})
-    set(CMAKE_CXX_FLAGS "-fuse-ld=mold")
-else()
+find_program(MOLD "mold")
+if (NOT ${MOLD})
     message(FATAL_ERROR "mold linker not found")
+else()
+    set(CMAKE_CXX_FLAGS "-fuse-ld=mold")
 endif()
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
@@ -30,4 +30,3 @@ endif()
 #
 # add_executable(${EXEC} ${SRC})
 # target_link_libraries(${EXEC} ${CONAN_LIBS})
-
