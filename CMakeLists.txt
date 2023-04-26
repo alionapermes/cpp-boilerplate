@@ -8,7 +8,7 @@ set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 find_program(MOLD NAMES "mold")
-if (NOE DEFINED ${MOLD-NOTFOUND})
+if (NOT DEFINED ${MOLD-NOTFOUND})
     set(CMAKE_CXX_FLAGS "-fuse-ld=mold")
 else()
     message(FATAL_ERROR "mold linker not found")
