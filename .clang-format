@@ -1,31 +1,36 @@
 ---
-Language:        Cpp
+# clang-format version: 15.0.7
+Language: Cpp
+Standard: Latest
 # BasedOnStyle:  Mozilla
 AccessModifierOffset: -4
-AlignAfterOpenBracket: false # seuta, but 4to est'
+AlignAfterOpenBracket: AlwaysBreak
 AlignConsecutiveMacros: AcrossComments
-AlignConsecutiveAssignments: AcrossComments
-AlignConsecutiveBitFields: AcrossComments
+AlignConsecutiveArrayOfStructures: Right
+AlignConsecutiveAssignments:
+  Enabled: true
+  AcrossEmptyLines: false
+  AcrossComments: true
+  AllignCompound: true
+  PadOperators: true
+AlignConsecutiveBitFields: Consecutive
 AlignConsecutiveDeclarations: None
-AlignEscapedNewlines: Left
-AlignOperands:   Align
+AlignEscapedNewlines: Right
+AlignOperands: AlignAfterOperator
 AlignTrailingComments: true
 AllowAllArgumentsOnNextLine: true
-AllowAllConstructorInitializersOnNextLine: true
+PackConstructorInitializersStyle: NextLine
 AllowAllParametersOfDeclarationOnNextLine: false
-AllowShortEnumsOnASingleLine: false
+AllowShortEnumsOnASingleLine: true
 AllowShortBlocksOnASingleLine: Empty
-AllowShortCaseLabelsOnASingleLine: false
-AllowShortFunctionsOnASingleLine: Inline
+AllowShortCaseLabelsOnASingleLine: true
+AllowShortFunctionsOnASingleLine: None
 AllowShortLambdasOnASingleLine: All
 AllowShortIfStatementsOnASingleLine: Never
 AllowShortLoopsOnASingleLine: false
-# AlwaysBreakAfterDefinitionReturnType: All
 AlwaysBreakAfterReturnType: All
 AlwaysBreakBeforeMultilineStrings: true
 AlwaysBreakTemplateDeclarations: Yes
-AttributeMacros:
-  - __capability
 BinPackArguments: false
 BinPackParameters: false
 BraceWrapping:
@@ -92,22 +97,22 @@ IncludeCategories:
     CaseSensitive:   false
 IncludeIsMainRegex: '(Test)?$'
 IncludeIsMainSourceRegex: ''
-IndentCaseLabels: true
+IndentCaseLabels: false
 IndentCaseBlocks: false
 IndentGotoLabels: false
-IndentPPDirectives: AfterHash
-IndentExternBlock: AfterExternBlock
-IndentRequires:  false
+IndentPPDirectives: BeforeHash
+IndentExternBlock: NoIndent
+IndentRequires:  true
 IndentWidth:     4
 IndentWrappedFunctionNames: false
-InsertTrailingCommas: None
+InsertTrailingCommas: Wrapped
 JavaScriptQuotes: Leave
 JavaScriptWrapImports: true
 KeepEmptyLinesAtTheStartOfBlocks: false
-MacroBlockBegin: ''
-MacroBlockEnd:   ''
+# MacroBlockBegin: ''
+# MacroBlockEnd:   ''
 MaxEmptyLinesToKeep: 2
-NamespaceIndentation: None
+NamespaceIndentation: Inner
 ObjCBinPackProtocolList: Auto
 ObjCBlockIndentWidth: 2
 ObjCBreakBeforeNestedBlockParam: true
@@ -133,7 +138,7 @@ SpaceAfterTemplateKeyword: false
 SpaceBeforeAssignmentOperators: true
 SpaceBeforeCaseColon: false
 SpaceBeforeCpp11BracedList: false
-SpaceBeforeCtorInitializerColon: true
+SpaceBeforeCtorInitializerColon: false
 SpaceBeforeInheritanceColon: true
 SpaceBeforeParens: ControlStatements
 SpaceAroundPointerQualifiers: Default
@@ -149,7 +154,6 @@ SpacesInParentheses: false
 SpacesInSquareBrackets: false
 SpaceBeforeSquareBrackets: false
 BitFieldColonSpacing: After
-Standard:        Latest
 StatementMacros:
   - Q_UNUSED
   - QT_REQUIRE_VERSION
